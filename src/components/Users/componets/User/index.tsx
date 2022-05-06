@@ -1,12 +1,11 @@
 import React from 'react';
-import IUser from '../entities/interfaces';
+import {TUser} from "./types";
 
 interface Props {
-  user: IUser;
+  user: TUser;
 }
 
 const User: React.FC<Props> = ({ user }) => {
-    console.log('one user changed')
   return (
     <div className="user">
       <div className="user-id"> {user.id}</div>

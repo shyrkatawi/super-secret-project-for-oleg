@@ -4,13 +4,13 @@ import './index.css';
 import { Provider } from 'react-redux';
 import App from './App';
 import { store } from './redux/store';
-import IUser from './entities/interfaces';
 import { setUsers } from './redux/slices/storeSlice';
+import {TUser} from "./components/Users/componets/User/types";
 
 fetch('http://localhost:3000/users.json')
   .then((response) => response.json())
   .then((json) => {
-    const users: IUser[] = json.users as IUser[];
+    const users: TUser[] = json.users as TUser[];
     store.dispatch(setUsers(users));
   });
 

@@ -1,5 +1,5 @@
-export default interface IUser {
+export type TUser = {
   id: number;
   name: string;
   surname: string;
-}
+};

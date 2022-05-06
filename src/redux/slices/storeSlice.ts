@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import IUser from '../../entities/interfaces';
-import { DEFAULT_SEARCHING_VALUE } from '../../entities/constants';
+import { DEFAULT_SEARCHING_VALUE } from '../../components/Users/componets/Input/constants';
+import {TUser} from "../../components/Users/componets/User/types";
 
-interface IState {
-  users: IUser[];
+type TState = {
+  users: TUser[];
   searchingValue: string;
 }
 
@@ -12,9 +12,9 @@ const storeSlice = createSlice({
   initialState: {
     users: [],
     searchingValue: DEFAULT_SEARCHING_VALUE,
-  } as IState,
+  } as TState,
   reducers: {
-    setUsers: (state, action: PayloadAction<IUser[]>) => {
+    setUsers: (state, action: PayloadAction<TUser[]>) => {
       state.users = action.payload;
     },
     setSearchingValue: (state, action: PayloadAction<string>) => {

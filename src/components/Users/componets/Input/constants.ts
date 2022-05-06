@@ -1,0 +1,2 @@
+export const DEFAULT_SEARCHING_VALUE = '';
+export const MIN_NUMBER_OF_CHARS_IN_INPUT_FOR_DISPATCH = 2;
